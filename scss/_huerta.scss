@@ -1,0 +1,56 @@
+
+/*.card-group .img {     
+    @include medidas(450px,300px);
+@include flex-column-centrado;
+    padding-left: 50px;
+    position: relative;
+
+}  */
+.container-fluid caja-bootstrap{
+    box-shadow: -15px 1px 60px -6px rgba(255, 226, 5, 0.916);
+}
+
+
+
+
+
+/*.text-white{
+    font-size: 18px;   
+}*/
+
+    /*Carrusel- presente en Huerta*/
+    .carousel-item img{
+        
+        @include medidas(450px,300px);
+        @include centrar-imagen;
+        padding-top: 20px;
+
+       
+    }
+    
+    @media (min-width: 768px) {
+    #carouselExample{
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+    } 
+    
+    .carousel-item img{
+        width: 50%;
+        height: 50%;
+        
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+   
+    
+    

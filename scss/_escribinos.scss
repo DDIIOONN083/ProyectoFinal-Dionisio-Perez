@@ -1,0 +1,108 @@
+
+.main-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .main-contacto{    
+        background-image: linear-gradient(to left, green, yellow);
+       }
+
+.foco{
+    width: 200px;
+    transition: width 2s;
+}
+.foco:focus{
+    width: 300px;
+}
+
+    @media(min-width: $tablet){
+        .main-contacto{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+form {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $espacio-chico;
+
+    .space{
+      color:rgb(49, 43, 43);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.space-boton{
+    gap: $espacio-chico;
+        margin-left: 10px;     
+      
+        border-radius: 50px;
+        justify-content: center;
+        flex-wrap:wrap;  
+       
+
+        .a{
+            color: white;
+            border-radius: 50px;
+            padding: 5px 10px;
+            background-color: cornflowerblue;
+            box-shadow: -35px 52px 96px -12px rgb(255, 247, 0);
+            border: none;
+                        &:hover {
+                color: black;
+                background-color: yellow;
+             
+            }     
+        }
+               
+    }  
+}
+
+
+
+
+footer{
+          
+    background-color: $color-primario;
+  @include  flex-column-centrado;
+    margin-top: $espacio-grande;
+
+    
+            /*ANIDACION*/
+    .container-redes  {  
+        color: $color-terciario;
+        text-decoration: none;
+        font-size: 40px;
+        margin-left: 100px;
+
+        .redes{           
+            width: 40px;                  
+        }
+    }
+}
+
+
+@media (min-width:$tablet) {
+.container{
+position: relative;
+width: 100vw;
+
+.padre-redes{
+flex-direction: column;
+position: fixed;
+top: 40%;
+right: 2%;
+    }}}
+
+
+

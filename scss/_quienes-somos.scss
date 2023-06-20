@@ -1,0 +1,177 @@
+
+
+ 
+  .presentacion{    
+    border-radius: 50%;
+        max-width: 25%;
+        margin-right:  20px;
+       margin-bottom: 50px;
+       box-shadow: -35px 52px 96px -12px rgb(255, 197, 8);
+  } 
+
+
+@media (min-width: 768px) {
+  /*.padre-cards*/
+  .presentacion{
+    @include centrar-imagen;
+    @include header-img;
+  } 
+}
+
+
+/*++++++*/
+  .container-fluid  {
+  @extend p;
+  margin: 20px ;
+  .navbar-toggler{
+    margin-bottom: 10px;
+ }
+      }
+
+
+     /*Mobile*/
+     #galeria{ 
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    
+      /*cambia*/
+      @media (min-width: 768px) {
+        /*.padre-cards*/
+        #galeria{
+          display: grid;
+          grid-template-areas:
+          "foto1 foto1 foto2 foto2 foto2"
+          "foto3 foto3 foto2 foto2 foto2"  
+          "foto3 foto3 foto2 foto2 foto2" 
+          "foto4 foto5 foto6 foto7 foto8";
+          gap: 1px;
+          margin: 30px 0;
+        } 
+      }
+      
+        .uno,.dos, .tres, .cuatro, .cinco, .seis, .siete, .ocho{
+            @include medidas(38vh,150px);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      }    
+    
+      /*--TABLETS*/
+      @media (min-width:768px) {/*--TABLETS*/
+      .uno, .dos, .tres, .cuatro, .cinco, .seis, .siete, .ocho{
+         height: 200px;
+        }
+      }
+        
+      .uno{
+          background-image: url(../img/1.jpg);
+      grid-area: foto1;
+      align-self: start;
+      width: 100%; 
+      }
+      
+        .dos{
+      background-image: url(../img/2.jpg);
+      grid-area: foto2;
+      align-self: start;
+      @include medidas(100%,100%); 
+      }
+      
+        .tres{
+          background-image: url(../img/3.jpg);
+      grid-area: foto3;
+      width: 100%;   
+      }
+      
+        .cuatro{
+          background-image: url(../img/4.jpg);
+          grid-area: foto4;  
+          width: 100%;  
+      }
+        .cinco{
+          background-image: url(../img/5.jpg);
+          grid-area: foto5;  
+          width: 100%;  
+      
+        }
+        .seis{
+          background-image: url(../img/6.jpg);
+          grid-area: foto6;  
+          width: 100%;  
+        }
+        .siete{
+          background-image: url(../img/7.jpg);
+          grid-area: foto7;  
+          width: 100%;  
+        }
+        .ocho{
+          background-image: url(../img/8.jpg);
+          grid-area: foto8;
+          width: 100%;    
+      }
+    
+    
+    
+    
+    
+  /*BANNERS*/
+.padre-banners2{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    p{ 
+     padding-right: 20px;
+    }
+  
+    }
+
+
+    @media (min-width: 768px) {
+      .padre-banners2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+      }
+    }
+  
+    
+ 
+    @media (min-width: 992px) {
+        .padre-banners2{
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+      }
+    }
+
+  
+    .padre-banners2 p{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        gap: 10px;
+        margin-left: 20px;
+      }
+
+        
+      footer{
+        @include  flex-column-centrado;
+           margin-left: 20px;
+          margin-top: $espacio-grande;
+
+                  /*ANIDACION*/
+          .container-redes  a{
+              color: $color-terciario;
+              text-decoration: none;
+              font-size: 40px;
+
+              .redes{
+                  width: 40px;
+              }
+          }
+      }

@@ -1,0 +1,170 @@
+/*Estilos comunes para todas las secciones*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body, .container-fluid {
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    font-family: $fuente-principal;
+background-color:  $color-primario;
+color: $color-secundario; 
+overflow-x: hidden;
+}
+
+
+@media (min-width:$tablet){
+body{
+    background-color: $color-primario;
+         }
+        }
+
+
+header{
+    display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #81B214;
+gap: 18px;
+padding: 20px 0;
+position: sticky;
+top: 0;
+
+.img{
+    margin-block-start: auto;
+}
+} 
+
+
+@media (min-width:768px){
+    header{
+     flex-direction: row;
+     justify-content: space-around;  
+         }
+        }
+
+
+/*Menu.*/
+
+.nav-link, .nav-link.active, .navbar-nav .nav-link.active {
+    color: $color-secundario;
+&:hover {
+    color: $color-terciario;
+}
+}
+
+.navbar-toggler {
+    background-color: $color-secundario;
+   
+}
+
+
+
+
+.carrusel-item img {
+    height: 250px;
+    }
+
+    @media (min-width: $tablet) {       
+    .carrusel-item img {
+        height: 60vh;
+    }
+    }
+
+    @media (min-width: $desktop) {       
+        .carrusel-item img {
+            height: 80vh;
+        }
+        }
+
+/*animacion de h1*/
+        h1{
+            text-align: center;
+            margin-top: $espacio-medio;
+            color: #206A5D;
+            font-weight: 500px;
+            animation-duration: 2s;
+            animation-name: aparecer;
+            animation-iteration-count: infinite;
+        }
+/*todos los titles de los footers son h3*/
+        h2,h3 {
+            @include  flex-column-centrado;
+            padding: auto;
+            text-align: center;
+            margin: auto;
+            font-size: $fuente-media;
+            color: #206A5D;
+            font-weight: 300px;
+        }
+
+        h4{
+          margin-left: 20px;
+            margin-top: $espacio-medio;
+            font-size: $fuente-media;
+        }
+
+        h5,h6 {
+            text-align: center;
+            margin-top: $espacio-mini;
+            font-size: $fuente-chica;
+            color: #206A5D;
+            font-weight: 600px;
+        }
+
+         h7{
+            @include  flex-column-centrado;
+            padding: 10px;
+            text-align: center; 
+            font-size: 25px;
+            color: #206A5D;
+            font-weight: 500px;
+        }
+
+
+        p{
+            font-size: $fuente-media;
+            text-align: center;   
+            margin-top: $fuente-media;
+        }            
+                   
+        
+        footer{ 
+            background-color: $color-primario;
+          @include  flex-column-centrado;
+            margin-top: $espacio-grande;
+            margin-right: 20px;
+
+            
+                    /*ANIDACION*/
+            .container-redes  {  
+                color: $color-terciario;
+                text-decoration: none;
+                font-size: 40px;
+                margin-left: 100px;
+
+                .redes{           
+                    width: 40px;                  
+                }
+            }
+        }
+      
+
+@media (min-width:$tablet) {
+    .container{
+    position: relative;
+    width: 100vw;
+    
+      .padre-redes{
+        flex-direction: column;
+        position: fixed;
+        top: 40%;
+        right: 2%;
+            }}}
+ 
+
+

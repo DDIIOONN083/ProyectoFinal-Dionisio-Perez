@@ -1,0 +1,65 @@
+$color-primario: #81B214;
+$color-secundario:grey;
+$color-terciario: yellow;
+$color-cuaternario: #ffc400d0;
+
+
+$fuente-principal: 'Roboto', sans-serif;
+$fuente-chica: 14px;
+$fuente-media: 20px;
+
+/*Resoluciones de Pantalla*/
+$tablet: 768px;
+$desktop: 992px;
+$desktopXG: 1200px;
+
+ /*Separaciones(margenes y paddings)*/
+ $espacio-mini: 10px;
+ $espacio-chico: 20px;
+ $espacio-medio: 40px;
+ $espacio-grande: 60px;
+
+ /*Márgenes*/
+ $margin-small: 20px;
+
+
+ @mixin flex-column-centrado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row-centrado{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin centrar-imagen{
+    display: block;
+    margin: auto; 
+}
+
+@mixin borde-iluminacion-imagen{
+    border-radius: 50%;
+    margin: 20px;
+    border-radius: 50% #fbf200 ;
+    box-shadow: -35px 52px 96px -12px rgb(255, 255, 2);
+}
+
+@mixin medidas ($ancho,$alto){
+    width: $ancho;
+    height: $alto;
+    }
+
+    @mixin header-img{
+        border-radius: 50%;
+        max-width: 25%;
+        margin-left:  20px;
+       margin-bottom: 10px;
+       box-shadow: -35px 52px 96px -12px rgb(255, 197, 8);
+   } 
+   
